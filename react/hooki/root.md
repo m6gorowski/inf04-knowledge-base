@@ -24,7 +24,7 @@ function Greeting(props) {
         <>
             <h1>Hello, {name}!</h1>
             <h2>Nice to meet you!</h2>
-        </h2>);
+        </>);
 }
 ```
 
