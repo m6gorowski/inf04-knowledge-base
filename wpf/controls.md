@@ -6,7 +6,7 @@ Służy do wprowadzania i edycji niesformatowanego tekstu przez użytkownika. Po
 ### Przykład kodu
 ```xml
 <TextBox
-  Name="tbMultiLine"
+  x:Name="tbMultiLine"
   TextWrapping="Wrap"
   AcceptsReturn="True"
   VerticalScrollBarVisibility="Visible"
@@ -238,3 +238,111 @@ Kontener, który układa elementy jeden obok drugiego (domyślnie poziomo). Gdy 
 ### Właściwości
 - `Orientation="Horizontal"` - Elementy układają się od lewej do prawej (domyślne). "Vertical" układałoby w kolumnach z góry na dół.
 - `ItemWidth="100"` - Wymusza stałą szerokość dla wszystkich elementów wewnątrz panelu (opcjonalne).
+
+---
+
+## TabControl
+
+No to ogólnie jest to taka kontrolka, która pozwala robić zakładki i se możesz przełączać tak jak w przeglądarce np.
+
+### Przykład kodu
+
+```xml
+<!-- Tworzymy TabControl z dwiema zakładkami -->
+<TabControl>
+    <!-- To jest tak jakby nazwa tej pierwszej zakładki -->
+    <TabItem Header="Pierwsza zakładka"> 
+        <!-- A tutaj środeczek -->
+        <TextBlock Text="Zawartość pierwszej zakładki"/> 
+    </TabItem>
+
+    <TabItem Header="Druga zakładka">
+        <TextBlock Text="Zawartość drugiej zakładki"/>
+    </TabItem>
+</TabControl>
+```
+
+---
+
+## ProgressBar
+
+Po prostu pasek postępu, np. ile masz procent na ile.
+
+### Przykład kodu
+
+```xml
+<!-- Tworzymy po prostu ziomka, minimum to jest jaka może być minimalna wartość analogicznie 
+maksimum, a value to jaką ustawiamy, wysokość oczywiście odnosi się do wysokości paska. -->
+<ProgressBar Minimum="0" Maximum="100" Value="50" Height="20"/> 
+```
+
+---
+
+## Expander
+
+Tu jest taki byk, że klikasz strzałke i się rozwija
+
+### Przykład kodu
+
+```xml
+<!-- No to jest tytuł tego rozwijacza obok strzałeczki -->
+<Expander Header="Pokaż szczegóły">
+    <TextBlock Text="Tu są jakieś dodatkowe informacje"/> <!-- A tu środeczek -->
+</Expander>
+```
+
+---
+
+## Frame/Page
+
+To służy do nawigacji między stronami w aplikacji też podobnie jak w przeglądarce
+
+### Przykład kodu
+
+```xml
+<Frame x:Name="MainFrame" /> <!-- Frame w oknie -->
+```
+
+```csharp
+MainFrame.Navigate(new Page1()); // Przełączanie widoku w C#
+```
+
+---
+
+## Grid
+
+No to jest taka kontrolka do robienia układu w wierszach i kolumnach
+
+### Przykład kodu
+
+```xml
+<Grid>
+    <Grid.RowDefinitions> <!-- No wiersz -->
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions> <!-- Kolumna -->
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <TextBlock Text="Lewy panel" Grid.Row="0" Grid.Column="0"/> <!-- I tutaj sobie ustawiamy w którym tym bloczku na tej siatce to ma być -->
+    <TextBlock Text="Prawy panel" Grid.Row="1" Grid.Column="1"/> <!-- I tu też -->
+</Grid>
+```
+
+---
+
+## StackPanel
+
+To ustawia elementy pionowo albo poziomo
+
+### Przykład kodu
+
+```xml
+<StackPanel Orientation="Vertical"> <!-- Tutaj orientacje ustalamy czy poziomo czy pionowo -->
+    <Button Content="Klik 1"/> <!-- A tu już zawartość -->
+    <Button Content="Klik 2"/>
+</StackPanel>
+```
