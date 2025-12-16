@@ -73,7 +73,7 @@ Pamiętajmy jednak, gdy tak robimy, musimy dodać klauzulę return!
 
 ### Klucze
 
-Wprawne oko zauważyło że do naszego &lt;li&gt; przypisałem klucz, tak zwany key. Do czego służy mistyczny klucz?
+Wprawne oko zauważyło że do naszego `<li>` przypisałem klucz, tak zwany key. Do czego służy mistyczny klucz?
 
 Mianowicie:
 
