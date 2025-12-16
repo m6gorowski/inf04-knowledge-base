@@ -57,7 +57,7 @@ console.log(inputs.input1.value);
 
 I to tyle wsm.
 
-W tej funkcji robimy co chcemy z tym. Może np. wysłać do backendu, może np. zwrócić do useState, może np. zwrócić do useState i wysłać do backendu. Jak ci się widzi.
+W tej funkcji robimy co chcemy z tym. Możemy np. wysłać do backendu albo zwrócić do `useState` . Jak ci się widzi.
 
 ## Alternatywy
 
