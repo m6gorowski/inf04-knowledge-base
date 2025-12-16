@@ -42,7 +42,7 @@ function Formularz() {
 }
 ```
 
-Jak widzimy mamy podpiętą funkcję onSubmit do formularza. Wtedy, gdy user submituje formularz, funkcja ta jest wywoływana.
+Jak widzimy mamy podpiętą funkcję `onSubmit` do formularza. Wtedy, gdy użytkownik wysyła formularz, funkcja ta jest wywoływana.
 
 Do funkcji automatycznie trafia jeden argument - event. Następuje mistyczne e.preventDefault(), które uniemożliwia domyślne zachowanie formularza, czyli przeładowanie strony.
 
