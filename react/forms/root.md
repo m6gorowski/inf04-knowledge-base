@@ -44,7 +44,7 @@ function Formularz() {
 
 Jak widzimy mamy podpiętą funkcję `onSubmit` do formularza. Wtedy, gdy użytkownik wysyła formularz, funkcja ta jest wywoływana.
 
-Do funkcji automatycznie trafia jeden argument - event. Następuje mistyczne e.preventDefault(), które uniemożliwia domyślne zachowanie formularza, czyli przeładowanie strony.
+Do funkcji automatycznie trafia jeden argument - event. Następuje mistyczne `e.preventDefault()`, które uniemożliwia domyślne zachowanie formularza, czyli przeładowanie strony.
 
 Następnie tworzymy zmienną inputs, która przechowuje wszystkie inputy z formularza. Dzięki currentTarget możemy odnieść się do formularza, a dzięki elements możemy odnieść się do inputów.
 
