@@ -1,10 +1,11 @@
 # Xamarin - Time & Data Picker
-- Powrót na start -> [Start](../root)
+- Powrót na start -> [Start](./root.md)
+
 ### Czym są "Pickery"
 Pickery są to nic innego jak elementy formularza, które pozwalają na wybranie daty lub czasu z poziomu interfejsu użytkownika. Po stronie XAML będziemy tworzyć proste kontrolki, zaś z poziomu kodu C# możemy łatwo odczytać wybrane przez użytkownika dane.
 
-## Data Picker (Wybór daty)
-Data Picker to nic innego jak wybieranie daty z kalendarza - spotykasz się z nim m.in. gdy ustawiasz przypomnienie na jakiś dzień.
+## Date Picker (Wybór daty)
+Date Picker to nic innego jak wybieranie daty z kalendarza - spotykasz się z nim m.in. gdy ustawiasz przypomnienie na jakiś dzień.
 
 ### Poniżej znajduje się kod `XAML`, wyświetlający przykładowy Data Picker:
 ```xml
@@ -23,14 +24,14 @@ DateTime selectedDate = datePicker.Date;
 * zawiera **tylko datę**, a godzina jest ustawiona domyślnie na `00:00:00`
 
 ## Time Picker (Wybór czasu)
-Time Picker służy do wybierania godziny i minuty - spotykasz się z nim m.in. gdy budzik w telefonie.
+Time Picker służy do wybierania godziny i minuty - spotykasz się z nim m.in. gdy ustawiasz budzik w telefonie.
 
-### Poniżej znajduje się kod `XAML`, wyświetlający przykładowy Time Picker:
+### Poniżej znajduje się kod `XAML`, wyświetlający przykładowy Time Picker
 ```xml
 <Label Text="Wybierz czas:" FontSize="Medium"/>
 <TimePicker x:Name="timePicker"/>
 ```
-### Tutaj jest kod `C#` który pobiera czas.
+### Tutaj jest kod `C#` który pobiera czas
 ```csharp
 TimeSpan selectedTime = timePicker.Time;
 ```
@@ -68,7 +69,7 @@ datePicker.MinimumDate = DateTime.Today;
 datePicker.MaximumDate = DateTime.Today.AddYears(1);
 ```
 
-`Przykład zastosowania`:
+#### Przykład zastosowania
 
 * nie można wybrać daty z przeszłości,
 * rezerwacja maksymalnie na rok do przodu.
@@ -125,7 +126,7 @@ datePicker.DateSelected += (sender, e) =>
 
 ### Reakcja na zmianę czasu
 
-TimePicker `nie ma dedykowanego zdarzenia` zmiany czasu
+TimePicker **nie ma dedykowanego zdarzenia** zmiany czasu
 ```csharp
 timePicker.PropertyChanged += (sender, e) =>
 {
